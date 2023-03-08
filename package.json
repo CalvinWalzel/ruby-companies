@@ -1,0 +1,19 @@
+{
+  "name": "ruby-companies",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "esbuild": "node esbuild.config.js --minify",
+    "esbuild-dev": "node esbuild.config.js --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.12",
+    "glob": "^8.0.1",
+    "postcss": "^8.4.12",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^14.1.0",
+    "postcss-load-config": "^4.0.1",
+    "postcss-preset-env": "^7.4.3",
+    "read-cache": "^1.0.0"
+  }
+}
