@@ -9,6 +9,11 @@ city: "Leeuwarden"
 website: https://booqable.com/
 careers_page: https://booqable.com/careers/
 
+work_arrangements:
+  - "remote"
+  - "hybdrid"
+  - "onsite"
+
 stack:
   - "rails"
   - "postgres"
