@@ -1,9 +1,11 @@
 ---
-layout: page
+layout: default
 ---
 
 <div class="container mx-auto max-w-7xl px-6 lg:px-8 py-10 grow">
-  <h1><%= data.title %></h1>
+  <% if data.title && data.title != "Index" %>
+    <h1><%= data.title %></h1>
+  <% end %>
 
   <%= yield %>
 </div>
