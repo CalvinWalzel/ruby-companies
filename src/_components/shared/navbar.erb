@@ -1,11 +1,12 @@
-<header>
-  <img src="<%= relative_url '/images/logo.svg' %>" alt="Logo" />
-</header>
+<header class="bg-white">
+  <nav class="mx-auto flex flex-col lg:flex-row max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
 
-<nav>
-  <ul>
-    <li><a href="<%= relative_url '/' %>">Home</a></li>
-    <li><a href="<%= relative_url '/about' %>">About</a></li>
-    <li><a href="<%= relative_url '/posts' %>">Posts</a></li>
-  </ul>
-</nav>
+    <a href="/" class="-m-1.5 p-1.5 text-5xl font-extrabold text-red-600 hover:text-red-900">
+      Ruby Companies
+    </a>
+    <div class="flex mt-6 lg:mt-0 gap-x-12">
+      <a href="/" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
+      <%# <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Meetups</a> %>
+    </div>
+  </nav>
+</header>

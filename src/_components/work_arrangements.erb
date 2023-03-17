@@ -1,0 +1,5 @@
+<% if @work_arrangements.any? %>
+  <span><%= @work_arrangements.join(", ") %></span>
+<% else %>
+  <span>Not specified</span>
+<% end %>

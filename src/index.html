@@ -1,0 +1,101 @@
+---
+layout: default
+---
+
+<div class="space-y-10">
+  <div>
+    <h2 class="text-sm font-medium text-gray-500 px-4 pb-4 sm:px-6">Newest Companies</h2>
+    <ul role="list" class="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
+      <% collections.companies.resources.sort { |a, b| b.data.created_at <=> a.data.created_at }.take(4).each do |company| %>
+        <li class="col-span-1 flex rounded-md shadow-sm">
+          <% if company.data.logo %>
+            <a href="<%= company.relative_url %>">
+              <img src="<%= company.relative_url %>/<%= company.data.logo %>" class="flex w-16 flex-shrink-0 items-center justify-center bg-white rounded-l-md border-t border-b border-l">
+            </a>
+            <% else %>
+            <div class="flex w-16 flex-shrink-0 items-center justify-center bg-gray-500 rounded-l-md border-t border-b border-l text-sm font-medium text-gray-400">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+              </svg>
+            </div>
+          <% end %>
+          <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-t border-r border-b border-gray-200 bg-white">
+            <div class="flex-1 truncate px-4 py-2 text-sm">
+              <a href="<%= company.relative_url %>" class="font-medium text-gray-900 hover:text-gray-600"><%= company.data.name %></a>
+              <p class="text-gray-500"><%= company.data.city %>, <%= company.data.country %></p>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="space-y-5">
+    <% collections.companies.resources.group_by { |company| company.data.continent }.each do |continent, companies| %>
+      <div>
+        <h2 class="text-xl font-bold text-gray-800 px-4 py-5 sm:px-6"><%= continent %></h2>
+
+        <div class="overflow-hidden bg-white shadow sm:rounded-md mt-3">
+          <ul role="list" class="divide-y divide-gray-200">
+            <% companies.sort_by { |company| company.data.country }.each do |company| %>
+
+              <li>
+                <div class="flex items-center px-4 py-4 sm:px-6">
+                  <div class="flex min-w-0 flex-1 items-center">
+                    <div class="flex-shrink-0">
+                      <a href="<%= company.relative_url %>" class="block">
+                        <img class="h-12 w-12 rounded-md" src="<%= company.relative_url %>/<%= company.data.logo %>" alt="">
+                      </a>
+                    </div>
+                    <div class="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4">
+                      <div>
+                        <a href="<%= company.relative_url %>">
+                          <span class="truncate text-sm font-medium text-gray-900 hover:text-gray-600"><%= company.data.name %></span>
+                        </a>
+                        <p class="mt-2 flex items-center text-sm text-gray-500">
+                          <svg class="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6.5 6.326a6.52 6.52 0 01-1.5.174 6.487 6.487 0 01-5.011-2.36l.49-.98a.423.423 0 01.614-.164l.294.196a.992.992 0 001.491-1.139l-.197-.593a.252.252 0 01.126-.304l1.973-.987a.938.938 0 00.361-1.359.375.375 0 01.239-.576l.125-.025A2.421 2.421 0 0012.327 6.6l.05-.149a1 1 0 00-.242-1.023l-1.489-1.489a.5.5 0 01-.146-.353v-.067a6.5 6.5 0 015.392 9.23 1.398 1.398 0 00-.68-.244l-.566-.566a1.5 1.5 0 00-1.06-.439h-.172a1.5 1.5 0 00-1.06.44l-.593.592a.501.501 0 01-.13.093l-1.578.79a1 1 0 00-.553.894v.191a1 1 0 001 1h.5a.5.5 0 01.5.5v.326z" clip-rule="evenodd" />
+                          </svg>
+                          <span class="truncate"><%= company.data.city %>, <%= company.data.country %></span>
+                        </p>
+                      </div>
+                      <div class="hidden md:block">
+                        <div>
+                          <% if company.data.stack.any? %>
+                            <% company.data.stack.take(3).each do |stack| %>
+                              <%= render Badges::Stack.new(stack: stack) %>
+                            <% end %>
+                          <% else %>
+                            <span>&nbsp;</span>
+                          <% end %>
+                          <p class="mt-2 flex items-center text-sm text-gray-500">
+                            <svg class="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z" />
+                              <path d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z" />
+                            </svg>
+                            <a href="<%= company.data.website %>" class="text-gray-900 hover:text-gray-600">Website</a>
+
+                            <svg class="ml-4 mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M6 3.75A2.75 2.75 0 018.75 1h2.5A2.75 2.75 0 0114 3.75v.443c.572.055 1.14.122 1.706.2C17.053 4.582 18 5.75 18 7.07v3.469c0 1.126-.694 2.191-1.83 2.54-1.952.599-4.024.921-6.17.921s-4.219-.322-6.17-.921C2.694 12.73 2 11.665 2 10.539V7.07c0-1.321.947-2.489 2.294-2.676A41.047 41.047 0 016 4.193V3.75zm6.5 0v.325a41.622 41.622 0 00-5 0V3.75c0-.69.56-1.25 1.25-1.25h2.5c.69 0 1.25.56 1.25 1.25zM10 10a1 1 0 00-1 1v.01a1 1 0 001 1h.01a1 1 0 001-1V11a1 1 0 00-1-1H10z" clip-rule="evenodd" />
+                              <path d="M3 15.055v-.684c.126.053.255.1.39.142 2.092.642 4.313.987 6.61.987 2.297 0 4.518-.345 6.61-.987.135-.041.264-.089.39-.142v.684c0 1.347-.985 2.53-2.363 2.686a41.454 41.454 0 01-9.274 0C3.985 17.585 3 16.402 3 15.055z" />
+                            </svg>
+                            <a href="<%= company.data.careers_page %>" class="text-gray-900 hover:text-gray-600">Careers</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

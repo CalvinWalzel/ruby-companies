@@ -1,0 +1,23 @@
+default:
+  klasses: "bg-gray-200 text-gray-800"
+
+# Web frameworks
+rails:
+  label: "Rails"
+  klasses: "bg-red-100 text-red-600"
+
+# Databases
+postgres:
+  label: "Postgres"
+  klasses: "bg-sky-100 text-sky-700"
+mysql:
+  label: "MySQL"
+  klasses: "bg-cyan-100 text-cyan-700"
+
+# Frontend frameworks
+react:
+  label: "React"
+  klasses: "bg-cyan-100 text-cyan-800"
+angular:
+  label: "Angular"
+  klasses: "bg-red-100 text-red-800"

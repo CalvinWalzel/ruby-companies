@@ -30,5 +30,19 @@ template_engine: erb
 # update `publicPath`.
 
 # timezone: America/Los_Angeles
-# pagination:
-#   enabled: true
+pagination:
+  enabled: true
+
+collections:
+  companies:
+    output: true
+    permalink: /:path/
+
+defaults:
+  - scope:
+      collection: "companies"
+    values:
+      layout: company
+      logo: "logo.jpg"
+      work_arrangements: []
+      stack: []
