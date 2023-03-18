@@ -24,3 +24,6 @@ angular:
 vuejs:
   label: "Vue.js"
   klasses: "bg-emerald-100 text-emerald-500"
+stimulus:
+  label: "Stimulus"
+  klasses: "bg-emerald-900 text-emerald-100"
