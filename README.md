@@ -1,70 +1,62 @@
-# Bridgetown Website README
+# Ruby Companies
 
-Welcome to your new Bridgetown website! You can update this README file to provide additional context and setup information for yourself or other contributors.
+![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/calvinwalzel/ruby-companies/gh-pages.yml?branch=main)
 
-## Table of Contents
+RubyCompanies.org is a simple list of companies developing software with Ruby, published collaboratively with the Ruby community. This project is heavily inspired by [RubyConferences.org](https://rubyconferences.org/).
 
-- [Prerequisites](#prerequisites)
-- [Install](#install)
-- [Development](#development)
-- [Commands](#commands)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
+## Eligible Companies
 
-## Prerequisites
-
-- [GCC](https://gcc.gnu.org/install/)
-- [Make](https://www.gnu.org/software/make/)
-- [Ruby](https://www.ruby-lang.org/en/downloads/)
-  - `>= 2.7`
-- [Bridgetown Gem](https://rubygems.org/gems/bridgetown)
-  - `gem install bridgetown -N`
-- [Node](https://nodejs.org)
-  - `>= 12`
-- [Yarn](https://yarnpkg.com)
-
-## Install
-
-```sh
-cd bridgetown-site-folder
-bundle install && yarn install
-```
-> Learn more: [Bridgetown Getting Started Documentation](https://www.bridgetownrb.com/docs/).
-
-## Development
-
-To start your site in development mode, run `bin/bridgetown start` and navigate to [localhost:4000](https://localhost:4000/)!
-
-Use a [theme](https://github.com/topics/bridgetown-theme) or add some [plugins](https://www.bridgetownrb.com/plugins/) to get started quickly.
-
-### Commands
-
-```sh
-# running locally
-bin/bridgetown start
-
-# build & deploy to production
-bin/bridgetown deploy
-
-# load the site up within a Ruby console (IRB)
-bin/bridgetown console
-```
-
-> Learn more: [Bridgetown CLI Documentation](https://www.bridgetownrb.com/docs/command-line-usage)
-
-## Deployment
-
-You can deploy Bridgetown sites on hosts like Render or Vercel as well as traditional web servers by simply building and copying the output folder to your HTML root.
-
-> Read the [Bridgetown Deployment Documentation](https://www.bridgetownrb.com/docs/deployment) for more information.
+For now, any company that works with Ruby (or a framework based on Ruby). Especially contributions of smaller companies are welcome!
 
 ## Contributing
 
-If repo is on GitHub:
+The list of companies is driven by the `src/_companies` directory.
 
-1. Fork it
+### Adding a company
+If you want to add a company, create a file with the following structure: `src/_companies/{continent}/{country}/{region}/{company}/index.md`. Then add at least the required YAML keys (see below) and send a PR.
+
+### Updating a company
+If you want to update a company, identify the YAML file and update the outdated or missing information and send a PR.
+
+### List of keys
+Here is a list of the keys that can be used:
+
+#### Required
+- `name`: The name of the company.
+- `continent`: The continent of the company headquarter.
+- `country`: The country the company headquarter is based in.
+- `region`: The region the company headquarter is based in.
+- `city`: The city the company headquarter is based in.
+- `website`: The url of the company website.
+- `created_at`: The timestamp when the company was created. We use this to determine the newest companies. The easiest way to generate is: `bin/bridgetown company:timestamp`. This will generate a UTC timestamp of the current moment.
+
+#### Optional
+- `careers_page`: A url of the careers page for the company.
+- `work_arrangements`: An array of the work arrangements the company offers. Possible values: `remote`, `hybdrid`, `onsite`.
+- `stack`: An array that describes (part of) the stack that the company uses. The first three values are also shown on the overview list, so it's important to hire the key tech here (usually language/framework, database, frontend framework). For a list of already added stacks see `src/_data/stacks.yml`. Feel free to add new values in that file. The klasses value contains [TailwindCSS](https://tailwindcss.com) classes. The text class color should be based on the brand color. [This tool](https://find-nearest-tailwind-colour.netlify.app/) can be used to find the closest Tailwind color from the palette. The background color should be the same color, but the `-100` shade of it. You can deviate from this if it doesn't look good.
+
+## Getting started
+
+The website is built with [Bridgetown.rb](https://www.bridgetownrb.com/).
+
+Install Ruby, then:
+
+```bash
+cd ruby-companies
+bundle install && yarn install
+bin/bridgetown start
+```
+
+and point your browser at [http://localhost:4000/](http://localhost:4000/)
+
+In case you want to submit a contribution:
+1. Fork the repository
 2. Clone the fork using `git clone` to your local development machine.
-3. Create your feature branch (`git checkout -b my-new-feature`)
-4. Commit your changes (`git commit -am 'Add some feature'`)
-5. Push to the branch (`git push origin my-new-feature`)
+3. Create your contribution branch (`git checkout -b my-contribution
+4. Commit your changes (`git commit -am 'Add ACME company'`)
+5. Push to the branch (`git push origin my-contribution
 6. Create a new Pull Request
+
+## License
+
+I'm not sure what the best license for this would be, but I'm open to suggestions.
