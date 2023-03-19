@@ -49,3 +49,12 @@ end
 #     say_status :rake, "I'm a Rake tast =) #{site.config.url}"
 #   end
 # end
+
+namespace :company do
+  desc "Generates a UTC timestamp that can be used for the `created_at` value of a new company"
+  task :timestamp => :environment do
+    timestamp = Time.now.utc.to_s.split(" ")[0...-1].join(" ")
+    puts "The timestamp is:"
+    puts "  " +timestamp
+  end
+end
