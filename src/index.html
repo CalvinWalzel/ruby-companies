@@ -10,7 +10,7 @@ layout: page
         <li class="col-span-1 flex rounded-md shadow-sm">
           <% if company.data.logo %>
             <a href="<%= company.relative_url %>">
-              <img src="<%= company.relative_url %>/<%= company.data.logo %>" class="flex w-16 flex-shrink-0 items-center justify-center bg-white rounded-l-md border-t border-b border-l">
+              <img src="<%= company.relative_url %><%= company.data.logo %>" class="flex w-16 flex-shrink-0 items-center justify-center bg-white rounded-l-md border-t border-b border-l">
             </a>
             <% else %>
             <div class="flex w-16 flex-shrink-0 items-center justify-center bg-gray-500 rounded-l-md border-t border-b border-l text-sm font-medium text-gray-400">
