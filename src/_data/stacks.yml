@@ -27,3 +27,6 @@ vuejs:
 stimulus:
   label: "Stimulus"
   klasses: "bg-emerald-900 text-emerald-100"
+emberjs:
+  label: "Ember.js"
+  klasses: "bg-red-500 text-white"
