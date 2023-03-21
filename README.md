@@ -2,7 +2,7 @@
 
 ![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/calvinwalzel/ruby-companies/gh-pages.yml?branch=main)
 
-RubyCompanies.org is a simple list of companies developing software with Ruby, published collaboratively with the Ruby community. This project is heavily inspired by [RubyConferences.org](https://rubyconferences.org/).
+[ruby-companies.org](https://ruby-companies.org) is a simple list of companies developing software with Ruby, published collaboratively with the Ruby community. This project is heavily inspired by [RubyConferences.org](https://rubyconferences.org/).
 
 ## Eligible Companies
 
