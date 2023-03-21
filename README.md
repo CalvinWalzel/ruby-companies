@@ -32,7 +32,7 @@ Here is a list of the keys that can be used:
 
 #### Optional
 - `careers_page`: A url of the careers page for the company.
-- `work_arrangements`: An array of the work arrangements the company offers. Possible values: `remote`, `hybdrid`, `onsite`.
+- `work_arrangements`: An array of the work arrangements the company offers. Possible values: `remote`, `hybrid`, `onsite`.
 - `stack`: An array that describes (part of) the stack that the company uses. The first three values are also shown on the overview list, so it's important to hire the key tech here (usually language/framework, database, frontend framework). For a list of already added stacks see `src/_data/stacks.yml`. Feel free to add new values in that file. The klasses value contains [TailwindCSS](https://tailwindcss.com) classes. The text class color should be based on the brand color. [This tool](https://find-nearest-tailwind-colour.netlify.app/) can be used to find the closest Tailwind color from the palette. The background color should be the same color, but the `-100` shade of it. You can deviate from this if it doesn't look good.
 
 ## Getting started

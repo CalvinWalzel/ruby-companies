@@ -11,7 +11,7 @@ careers_page: https://career.teamtailor.com
 
 work_arrangements:
   - remote
-  - hybdrid
+  - hybrid
   - onsite
 
 stack:
