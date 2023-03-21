@@ -16,8 +16,8 @@ work_arrangements:
 
 stack:
   - "rails"
-  - "emberjs"
   - "postgres"
+  - "emberjs"
 
 created_at: 2023-03-20 07:36:45
 ---
