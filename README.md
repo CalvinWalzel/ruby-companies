@@ -28,7 +28,7 @@ Here is a list of the keys that can be used:
 - `region`: The region the company headquarter is based in.
 - `city`: The city the company headquarter is based in.
 - `website`: The url of the company website.
-- `created_at`: The timestamp when the company was created. We use this to determine the newest companies. The easiest way to generate is: `bin/bridgetown company:timestamp`. This will generate a UTC timestamp of the current moment.
+- `created_at`: The timestamp when the company was added to Ruby Companies. We use this to determine the newest companies. The easiest way to generate is: `bin/bridgetown company:timestamp`. This will generate a UTC timestamp of the current moment.
 
 #### Optional
 - `careers_page`: A url of the careers page for the company.
