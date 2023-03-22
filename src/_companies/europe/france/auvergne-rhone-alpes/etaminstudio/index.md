@@ -17,4 +17,4 @@ stack:
 created_at: 2023-03-20 09:47:00
 ---
 
-We are passionate developers and designers, creators of quality web and mobile experiences.
+Etamin Studio is a team of passionate developers and designers, creators of quality web and mobile experiences.
