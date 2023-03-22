@@ -17,7 +17,7 @@ stack:
   - "rails"
   - "vuejs"
 
-created_at: 2023-03-22 10:40:00
+created_at: 2023-03-22 22:42:05
 
 logo: "logo.png"
 ---
