@@ -18,6 +18,6 @@ work_arrangements:
 
 stack:
   - "rails"
-  - "stimulus"
   - "postgres"
+  - "stimulus"
 ---
