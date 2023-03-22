@@ -19,6 +19,6 @@ stack:
   - "postgres"
   - "emberjs"
 
-created_at: 2023-03-20 12:30:00
+created_at: 2023-03-22 22:38:12
 ---
 Userlist is an email automation platform for SaaS companies. Unlike other email providers, it meets the complexity of your SaaS business. You can track company-level data, and trigger campaigns based on company-level events. It’s the best way to onboard, engage, and nurture customers and marketing leads.
