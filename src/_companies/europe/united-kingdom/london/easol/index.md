@@ -11,12 +11,12 @@ website: https://easol.com
 careers_page: https://easol.com/careers
 
 work_arrangements:
-- onsite
+  - onsite
 
 stack:
-- rails
-- postgres
-- stimulus
+  - rails
+  - postgres
+  - stimulus
 
 created_at: 2023-03-21 13:12:11
 ---
