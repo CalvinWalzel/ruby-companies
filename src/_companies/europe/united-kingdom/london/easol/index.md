@@ -12,6 +12,7 @@ careers_page: https://easol.com/careers
 
 work_arrangements:
   - onsite
+  - remote
 
 stack:
   - rails
