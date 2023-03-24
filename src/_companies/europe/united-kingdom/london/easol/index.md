@@ -30,9 +30,3 @@ that way - because experience creators have been suffering with the wrong tools.
 With Easol, there is no more stitching together ineffective tools built for
 selling "things", paying third-party booking fees or having to create pricey
 custom solutions.
-
-We believe that with the right tools, anyone can turn their passion into an
-empire. So we made them – and brought them together to work in sync, all in one
-place. We call this '**[Experience Commerce](https://easol.com/ex-commerce)'.**
-It's e-commerce specially designed for selling experiences and especially
-designed for experience creators.
