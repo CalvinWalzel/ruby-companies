@@ -13,7 +13,7 @@ work_arrangements:
 
 stack:
   - "rails"
-  - "stiumulus"
+  - "stimulus"
   - "postgres"
   - "hotwire"
 
