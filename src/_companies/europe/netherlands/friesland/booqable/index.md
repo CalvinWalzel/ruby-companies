@@ -11,7 +11,7 @@ careers_page: https://booqable.com/careers/
 
 work_arrangements:
   - "remote"
-  - "hybdrid"
+  - "hybrid"
   - "onsite"
 
 stack:
