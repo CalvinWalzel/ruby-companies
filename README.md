@@ -41,7 +41,7 @@ Below the YAML keys (which use the [front matter](https://www.bridgetownrb.com/d
 If you have a hard time coming up with a company description, you can try to ask ChatGPT. An example prompt would be: `Write me a short, neutral summary of the company {company name} in less than 100 words.`
 
 ### Company logo
-You can add a logo for the company. Currently, we suggest svg, png or jpg images with a resolution of 200x200 pixels. The image can be larger than that, but it has to be square. Please keep in mind we're not an image hosting service, so use optimized assets. If you have a hard time finding a logo, you might find a suitable variant on the LinkedIn profile of the company you're trying to contribute an entry for.
+You can add a logo for the company. Currently, we suggest svg, png or jpg images with a resolution of 200x200 pixels. The image can be larger than that, but it has to be square. Please keep in mind we're not an image hosting service, so use optimized assets. The maximum file size should be 50KB. If you have a hard time finding a logo, you might find a suitable variant on the LinkedIn profile of the company you're trying to contribute an entry for.
 
 In case you want to contribute additional image assets, please prefix them with an underscore so they're not exported in the build process (e.g. `_original_logo.png`).
 
