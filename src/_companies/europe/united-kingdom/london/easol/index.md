@@ -19,7 +19,7 @@ stack:
   - postgres
   - stimulus
 
-created_at: 2023-03-21 13:12:11
+created_at: 2023-03-28 10:40:00
 ---
 
 Easol, founded in 2017, is the all-in-one platform for managing your entire
