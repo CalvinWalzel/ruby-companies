@@ -7,7 +7,7 @@ region: "Hessen"
 city: "Hofheim am Taunus"
 
 website: https://wolkenwerk.cloud
-logo: logo.svg
+logo: wwrk.svg
 
 work_arrangements:
   - "hybrid"
