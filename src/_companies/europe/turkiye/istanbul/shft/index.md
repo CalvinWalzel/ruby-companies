@@ -23,4 +23,4 @@ stack:
 created_at: 2023-03-28 10:38:16
 ---
 
-SHFT is a startup for the fast-growing tech companies. We take the development load off your shoulders with scalable and dedicated in-house developers. Think of us as your strategic product partner that codes. We welcome the enthusiastic startups and target-driven scale-ups; assist them with a thorough design, accompanied by a detailed MVP scope, followed by an impeccable development, and finally a confident product launch. We essentially cover your whole product building phase.
+SHFT is a startup for the fast-growing tech companies. They position themselves as a strategic product partner providing coding services. It particularly welcomes enthusiastic startups and target-driven scale-ups. Assisting clients with thorough design, accompanied by a detailed MVP scope, followed by impeccable development, and ultimately a confident product launch. SHFT's services essentially cover the entire product building phase.
