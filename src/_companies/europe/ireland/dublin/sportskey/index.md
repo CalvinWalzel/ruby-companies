@@ -13,8 +13,8 @@ work_arrangements:
 
 stack:
   - "rails"
-  - "stimulus"
   - "postgres"
+  - "stimulus"
   - "hotwire"
 
 created_at: 2023-04-03 21:53:45
