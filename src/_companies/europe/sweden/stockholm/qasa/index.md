@@ -18,7 +18,7 @@ stack:
   - "postgres"
   - "react"
 
-created_at: 2023-03-27 01:33:70
+created_at: 2023-04-03 22:01:50
 ---
 
 Qasa believes that rental homes play a critical role in fostering mobility and facilitating personal and social development. Their mission is to revolutionize home rentals and create a more enjoyable rental experience for property owners and tenants alike, allowing more individuals to spend less time searching for a place to live and more time settling into their new home.
