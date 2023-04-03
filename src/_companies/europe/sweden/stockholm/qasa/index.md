@@ -9,6 +9,8 @@ city: "Stockholm"
 website: https://qasa.se/
 careers_page: https://careers.qasa.se
 
+logo: logo.png
+
 work_arrangements:
   - hybrid
   - onsite
