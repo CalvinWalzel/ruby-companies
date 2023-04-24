@@ -18,8 +18,7 @@ stack:
   - "vuejs"
   - "mysql"
 
-created_at: 2023-03-20 20:47:00
+created_at: 2023-04-23 20:47:00
 ---
 
-Our product "Papierkram" is the most innovative and easy-to-use cloud accounting software on the German market.  
-Papierkram.de is a leading cloud-based accounting software designed to simplify financial management for small businesses and freelancers in Germany. Our platform provides a comprehensive suite of tools that enables users to manage their invoicing, expenses, and financial reports from a centralized and user-friendly interface. With features such as automatic bank synchronization, recurring invoicing, and integration with popular business tools, Papierkram.de is trusted by thousands of users across Germany to help them streamline their financial operations.
+odacer's main product "Papierkram.de" is an innovative and user-friendly cloud accounting software in Germany for small businesses and freelancers. It simplifies financial management with invoicing, expenses, and financial reports in one place. With automatic bank synchronization, recurring invoicing, and integration with popular business tools helps users streamline their businesses.
