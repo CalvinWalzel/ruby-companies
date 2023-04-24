@@ -2,7 +2,7 @@
 name: Go Free Range
 
 continent: "Europe"
-country: "UK"
+country: "United Kingdom"
 region: "London"
 city: "London"
 
