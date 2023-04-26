@@ -8,6 +8,7 @@ city: "Wiesbaden"
 
 website: https://www.odacer.com/
 careers_page: https://www.odacer.com/jobs/
+logo: logo.png
 
 work_arrangements:
   - "hybrid"
