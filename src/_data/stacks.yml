@@ -33,6 +33,9 @@ stimulus:
 emberjs:
   label: "Ember.js"
   klasses: "bg-red-200 text-red-500"
+hotwire:
+  label: "Hotwire"
+  klasses: "bg-yellow-100 text-yellow-600"
 
 # Monitoring / APM
 appsignal:
