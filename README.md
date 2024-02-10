@@ -2,6 +2,9 @@
 
 ![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/calvinwalzel/ruby-companies/gh-pages.yml?branch=main)
 
+> [!IMPORTANT]
+> Currently, no pull requests for version 1 are accepted. Work on version 2 as a Ruby on Rails app with self-support has started. You can find the current progress in the `version-2` branch and the [Ruby Companies v2 project board](https://github.com/users/CalvinWalzel/projects/1/). Contributions are welcome!
+
 [ruby-companies.org](https://ruby-companies.org) is a simple list of companies developing software with Ruby, published collaboratively with the Ruby community. This project is heavily inspired by [RubyConferences.org](https://rubyconferences.org/).
 
 ## Eligible Companies
