@@ -1,7 +1,6 @@
-# This file is used by Rack-based servers during the Bridgetown boot process.
+# This file is used by Rack-based servers to start the application.
 
-require "bridgetown-core/rack/boot"
+require_relative "config/environment"
 
-Bridgetown::Rack.boot
-
-run RodaApp.freeze.app # see server/roda_app.rb
+run Rails.application
+Rails.application.load_server
