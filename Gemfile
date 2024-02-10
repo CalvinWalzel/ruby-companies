@@ -75,4 +75,6 @@ gem "rubocop", require: false
 
 gem "rubocop-shopify", require: false
 
-gem "ruby-lsp-rails", "~> 0.2.9", :group => :development
+gem "ruby-lsp-rails", "~> 0.2.9", group: :development
+
+gem "public_suffix", "~> 5.0"
