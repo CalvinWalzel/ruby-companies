@@ -1,1 +1,2 @@
 rails: bin/rails server
+vite: bin/vite dev
