@@ -3,6 +3,7 @@
     "@shopify/eslint-plugin": "^44.0.0",
     "@types/react": "^18.2.78",
     "@types/react-dom": "^18.2.25",
+    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "8",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5",
