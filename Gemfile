@@ -74,3 +74,5 @@ gem "ruby-lsp-rails", group: :development
 gem "public_suffix", "~> 5.0"
 
 gem "vite_rails", "~> 3.0"
+
+gem "inertia_rails", "~> 3.1"

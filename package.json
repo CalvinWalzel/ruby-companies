@@ -1,6 +1,13 @@
 {
   "devDependencies": {
+    "@types/react": "^18.2.78",
+    "@types/react-dom": "^18.2.25",
     "vite": "^5.2.8",
     "vite-plugin-ruby": "^5.0.0"
+  },
+  "dependencies": {
+    "@inertiajs/react": "^1.0.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
