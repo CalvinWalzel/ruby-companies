@@ -1,13 +1,9 @@
-type Props = {
+interface Props {
   name: string;
-};
+}
 
 function Show({ name }: Props) {
-  return (
-    <div>
-      <h1>Hello {name}</h1>
-    </div>
-  );
+  return <h1>Hello {name}</h1>;
 }
 
 Show.displayName = "home/show";

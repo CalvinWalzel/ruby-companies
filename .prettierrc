@@ -1,0 +1,10 @@
+{
+  "overrides": [
+    {
+      "files": [".eslintrc"],
+      "options": {
+        "trailingComma": "none"
+      }
+    }
+  ]
+}

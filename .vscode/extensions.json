@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "shopify.ruby-lsp",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
   ]
 }
