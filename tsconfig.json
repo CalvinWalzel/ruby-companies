@@ -6,6 +6,9 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "types": ["vite/client"],
+    "paths": {
+      "@/*": ["./app/frontend/*"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
