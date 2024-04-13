@@ -317,7 +317,7 @@ DEPENDENCIES
   redis (>= 4.0.1)
   rubocop
   rubocop-shopify
-  ruby-lsp-rails (~> 0.2.9)
+  ruby-lsp-rails
   selenium-webdriver
   sprockets-rails
   stimulus-rails
