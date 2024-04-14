@@ -8,7 +8,7 @@
   "parserOptions": {
     "project": "tsconfig.json"
   },
-  "ignorePatterns": ["vite.config.ts"],
+  "ignorePatterns": ["vite.config.ts", "tailwind.config.js"],
   "rules": {
     "@shopify/jsx-no-hardcoded-content": "off",
     "react/react-in-jsx-scope": "off"
