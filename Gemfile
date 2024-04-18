@@ -76,3 +76,5 @@ gem "public_suffix", "~> 5.0"
 gem "vite_rails", "~> 3.0"
 
 gem "inertia_rails", "~> 3.1"
+
+gem "oj_serializers", "~> 2.0"

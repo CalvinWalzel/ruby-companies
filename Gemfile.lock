@@ -155,6 +155,10 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.2-x86_64-linux)
       racc (~> 1.4)
+    oj (3.16.3)
+      bigdecimal (>= 3.0)
+    oj_serializers (2.0.3)
+      oj (>= 3.14.0)
     parallel (1.24.0)
     parser (3.3.0.5)
       ast (~> 2.4.1)
@@ -306,6 +310,7 @@ DEPENDENCIES
   debug
   inertia_rails (~> 3.1)
   jbuilder
+  oj_serializers (~> 2.0)
   pg (~> 1.1)
   public_suffix (~> 5.0)
   puma (>= 5.0)
