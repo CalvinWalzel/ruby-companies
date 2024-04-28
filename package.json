@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@inertiajs/react": "^1.0.15",
+    "@tanstack/react-table": "^8.16.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.368.0",
@@ -25,5 +26,10 @@
     "react-dom": "^18.2.0",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7"
-  }
+  },
+  "volta": {
+    "node": "20.12.2",
+    "yarn": "4.1.1"
+  },
+  "packageManager": "yarn@4.1.1"
 }
