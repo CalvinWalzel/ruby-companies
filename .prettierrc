@@ -10,9 +10,10 @@
   ],
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
-    "^@/pages/(.*)$",
-    "^@/components/ui/(.*)$",
     "^@/components/(.*)$",
+    "^@/components/ui/(.*)$",
+    "^@/models/(.*)$",
+    "^@/pages/(.*)$",
     "^@/utils/(.*)$",
     "^@/(.*)$",
     "^[./]"
