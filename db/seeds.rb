@@ -14,12 +14,14 @@ require "faker"
 
 Company.destroy_all
 
-companies = []
-
-50.times do
-  companies << {
+companies = Array.new(50) do
+  {
     name: Faker::Company.name,
     website: "#{Faker::Internet.domain_word}.com",
+    introduction: Faker::Lorem
+      .paragraphs(number: rand(0..4))
+      .presence
+      &.join("\n"),
   }
 end
 

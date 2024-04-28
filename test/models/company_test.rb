@@ -21,4 +21,14 @@ class CompanyTest < ActiveSupport::TestCase
     @company.website = nil
     assert @company.valid?
   end
+
+  test "should save company with valid website" do
+    @company.website = "example.com"
+    assert @company.valid?
+  end
+
+  test "should save company with introduction" do
+    @company.introduction = "This is an introduction"
+    assert @company.valid?
+  end
 end
