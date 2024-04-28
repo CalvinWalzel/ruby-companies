@@ -78,3 +78,5 @@ gem "vite_rails", "~> 3.0"
 gem "inertia_rails", "~> 3.1"
 
 gem "oj_serializers", "~> 2.0"
+
+gem "faker", "~> 3.3", group: [:development, :test], require: false

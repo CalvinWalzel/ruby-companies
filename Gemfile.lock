@@ -104,6 +104,8 @@ GEM
       ruby2_keywords
     dry-cli (1.0.0)
     erubi (1.12.0)
+    faker (3.3.1)
+      i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -308,6 +310,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  faker (~> 3.3)
   inertia_rails (~> 3.1)
   jbuilder
   oj_serializers (~> 2.0)
