@@ -34,6 +34,11 @@ emberjs:
   label: "Ember.js"
   klasses: "bg-red-200 text-red-500"
 
+# Mobile framework
+ionic:
+  label: "Ionic"
+  klasses: "bg-blue-100 text-blue-600"
+
 # Monitoring / APM
 appsignal:
   label: "AppSignal"
