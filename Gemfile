@@ -80,3 +80,5 @@ gem "inertia_rails", "~> 3.1"
 gem "oj_serializers", "~> 2.0"
 
 gem "faker", "~> 3.3", group: [:development, :test], require: false
+
+gem "bundle_update_interactive", "~> 0.3.0", group: :development, require: false
