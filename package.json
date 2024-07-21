@@ -28,8 +28,8 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "volta": {
-    "node": "20.12.2",
+    "node": "20.15.1",
     "yarn": "4.1.1"
   },
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.3.1"
 }
