@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+return unless Rails.env.development?
+
 require "faker"
 
 # This file should ensure the existence of records required to run the application in every environment (production,
