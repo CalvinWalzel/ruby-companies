@@ -71,7 +71,7 @@ gem "rubocop-shopify", require: false
 
 gem "ruby-lsp-rails", group: :development
 
-gem "public_suffix", "~> 5.0"
+gem "validate_url", "~> 1.0"
 
 gem "vite_rails", "~> 3.0"
 
