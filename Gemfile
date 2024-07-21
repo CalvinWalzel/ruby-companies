@@ -82,3 +82,7 @@ gem "oj_serializers", "~> 2.0"
 gem "faker", "~> 3.3", group: [:development, :test], require: false
 
 gem "bundle_update_interactive", "~> 0.3.0", group: :development, require: false
+
+gem "rspec-rails", "~> 6.1", group: [:development, :test]
+
+gem "factory_bot_rails", "~> 6.4", group: [:development, :test]
