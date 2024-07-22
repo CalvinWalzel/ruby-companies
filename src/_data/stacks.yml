@@ -5,6 +5,9 @@ default:
 rails:
   label: "Rails"
   klasses: "bg-red-100 text-red-600"
+sinatra:
+  label: "Sinatra"
+  klasses: "bg-red-100 text-red-600"
 
 # Databases
 postgres:
