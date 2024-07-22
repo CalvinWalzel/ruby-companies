@@ -5,6 +5,12 @@ default:
 rails:
   label: "Rails"
   klasses: "bg-red-100 text-red-600"
+hanami:
+  label: "Hanami"
+  klasses: "bg-orange-100 text-orange-700"
+bridgetown:
+  label: "Bridgetown"
+  klasses: "bg-green-100 text-green-800"
 
 # Databases
 postgres:
