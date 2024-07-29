@@ -4,25 +4,33 @@ return unless Rails.env.development?
 
 require "faker"
 
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+class Seeder
+  class << self
+    def perform
+      seed_companies
+    end
 
-Company.destroy_all
+    def seed_companies
+      Company.destroy_all
 
-companies = []
+      Company.create(name: "Pixelhub", website: "https://pixelhub.nl")
+      Company.create(name: "AvoHQ", website: "https://avohq.io")
 
-50.times do
-  companies << {
-    name: Faker::Company.name,
-    website: "#{Faker::Internet.domain_word}.com",
-  }
+      create_records(Company, 48) do |i|
+        {
+          name: "Company #{i}",
+          website: "about:blank",
+        }
+      end
+    end
+
+    private
+
+    def create_records(model, count, &block)
+      record_data = Array.new(count, &block)
+      model.insert_all!(record_data)
+    end
+  end
 end
 
-companies.each { |c| Company.create!(c) }
+Seeder.perform
