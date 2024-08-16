@@ -17,8 +17,18 @@ RSpec.describe(Company, type: :model) do
     expect(company).to_not(be_valid)
   end
 
-  it "validates website structure" do
+  it "validates website url format" do
     company.website = "invalid"
     expect(company).to_not(be_valid)
+  end
+
+  it "validates careers_page url format" do
+    company.careers_page = "invalid"
+    expect(company).to_not(be_valid)
+  end
+
+  it "works with valid career_page url" do
+    company.careers_page = "https://example.com"
+    expect(company).to(be_valid)
   end
 end

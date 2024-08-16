@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-class CompanySerializer < Oj::Serializer
+class CompanySerializer < ApplicationSerializer
   attributes :id,
     :name,
     :website,
-    :created_at,
-    :updated_at
+    :careers_page,
+    :description
 end
