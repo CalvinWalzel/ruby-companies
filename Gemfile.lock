@@ -185,6 +185,7 @@ GEM
       bigdecimal (>= 3.0)
     oj_serializers (2.0.3)
       oj (>= 3.14.0)
+    pagy (8.6.3)
     parallel (1.25.1)
     parser (3.3.4.0)
       ast (~> 2.4.1)
@@ -375,6 +376,7 @@ DEPENDENCIES
   inertia_rails (~> 3.1)
   jbuilder
   oj_serializers (~> 2.0)
+  pagy (< 9)
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.3)
