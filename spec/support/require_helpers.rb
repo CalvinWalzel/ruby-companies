@@ -7,3 +7,7 @@ end
 def require_inertia
   require Rails.root.join("spec/support/inertia.rb")
 end
+
+def require_shoulda_matchers
+  require Rails.root.join("spec/support/shoulda_matchers.rb")
+end

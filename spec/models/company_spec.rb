@@ -3,32 +3,21 @@
 require "rails_helper"
 
 RSpec.describe(Company, type: :model) do
-  require_factories
+  require_shoulda_matchers
 
-  let(:company) { create(:company) }
+  describe "validations" do
+    it { is_expected.to(validate_presence_of(:name)) }
 
-  it "validates name presence" do
-    company.name = nil
-    expect(company).to_not(be_valid)
-  end
+    context "website" do
+      it { is_expected.to(validate_url_of(:website)) }
+      it { is_expected.to(allow_values("https://pixelhub.nl").for(:website)) }
+      it { is_expected.to_not(allow_values(nil, "", "http://localhost", "https://pixelhub.invalid").for(:website)) }
+    end
 
-  it "validates website presence" do
-    company.website = nil
-    expect(company).to_not(be_valid)
-  end
-
-  it "validates website url format" do
-    company.website = "invalid"
-    expect(company).to_not(be_valid)
-  end
-
-  it "validates careers_page url format" do
-    company.careers_page = "invalid"
-    expect(company).to_not(be_valid)
-  end
-
-  it "works with valid career_page url" do
-    company.careers_page = "https://example.com"
-    expect(company).to(be_valid)
+    context "careers_page" do
+      it { is_expected.to(validate_url_of(:careers_page)) }
+      it { is_expected.to(allow_values(nil, "", "https://pixelhub.nl").for(:careers_page)) }
+      it { is_expected.to_not(allow_values("http://localhost", "https://pixelhub.invalid").for(:careers_page)) }
+    end
   end
 end

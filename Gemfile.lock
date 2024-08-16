@@ -301,6 +301,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    shoulda-matchers (6.4.0)
+      activesupport (>= 5.2.0)
     sorbet-runtime (0.5.11491)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
@@ -386,6 +388,7 @@ DEPENDENCIES
   rubocop-shopify
   ruby-lsp-rails
   selenium-webdriver
+  shoulda-matchers (~> 6.4)
   sprockets-rails
   stimulus-rails
   turbo-rails

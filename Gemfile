@@ -88,3 +88,5 @@ gem "rspec-rails", "~> 6.1", group: [:development, :test]
 gem "factory_bot_rails", "~> 6.4", group: [:development, :test]
 
 gem "pagy", "< 9"
+
+gem "shoulda-matchers", "~> 6.4", group: :test
