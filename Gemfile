@@ -90,3 +90,5 @@ gem "factory_bot_rails", "~> 6.4", group: [:development, :test]
 gem "pagy", "< 9"
 
 gem "shoulda-matchers", "~> 6.4", group: :test
+
+gem "ruby-lsp-rspec", "~> 0.1.12", group: :development, require: false
