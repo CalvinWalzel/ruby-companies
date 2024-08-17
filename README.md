@@ -12,7 +12,6 @@ Ruby Companies is a community-driven repository that lists companies worldwide u
 - PostgreSQL 16
 - Node.js (version specified in `.node-version`)
 - Yarn (managed via corepack, version specified in `package.json`)
-- (Optional) [puma-dev](https://github.com/puma/puma-dev) for local development
 
 ## Setup
 
@@ -38,10 +37,7 @@ To run the project:
 bin/dev
 ```
 
-Access the application:
-
-- Without puma-dev: [http://localhost:3000](http://localhost:3000)
-- With puma-dev: [https://ruby-companies.test](https://ruby-companies.test)
+Access the application: [http://localhost:3000](http://localhost:3000)
 
 ## Testing
 
