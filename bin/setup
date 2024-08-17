@@ -1,14 +1,16 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 require "fileutils"
 
-# path to your application root.
 APP_ROOT = File.expand_path("..", __dir__)
+APP_NAME = "ruby-companies"
 
 def system!(*args)
   system(*args, exception: true)
 end
 
-FileUtils.chdir APP_ROOT do
+FileUtils.chdir(APP_ROOT) do
   # This script is a way to set up or update your development environment automatically.
   # This script is idempotent, so that you can run it at any time and get an expectable outcome.
   # Add necessary setup steps to this file.
@@ -30,4 +32,10 @@ FileUtils.chdir APP_ROOT do
 
   puts "\n== Restarting application server =="
   system! "bin/rails restart"
+
+  if system("which puma-dev > /dev/null 2>&1")
+    puts "\n== Configuring puma-dev =="
+    system "ln -nfs #{APP_ROOT} ~/.puma-dev/#{APP_NAME}"
+    system "curl -Is https://#{APP_NAME}.test/up | head -n 1"
+  end
 end
