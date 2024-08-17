@@ -12,5 +12,5 @@
 inherit_gem:
   rubocop-shopify: rubocop.yml
 AllCops:
-  Excludes:
+  Exclude:
     - db/schema.rb
