@@ -6,4 +6,6 @@ class CompanySerializer < ApplicationSerializer
     :website,
     :careers_page,
     :description
+
+  has_many :technologies, serializer: TechnologySerializer
 end
