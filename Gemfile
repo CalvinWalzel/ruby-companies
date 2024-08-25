@@ -95,3 +95,5 @@ gem "pagy", "< 9"
 gem "shoulda-matchers", "~> 6.4", group: :test
 
 gem "ruby-lsp-rspec", "~> 0.1.12", group: :development, require: false
+
+gem "bullet", "~> 7.2", group: [:development, :test]

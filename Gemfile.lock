@@ -82,6 +82,9 @@ GEM
     brakeman (6.2.1)
       racc
     builder (3.3.0)
+    bullet (7.2.0)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     bundle_update_interactive (0.7.0)
       bundler (~> 2.0)
       bundler-audit (>= 0.9.1)
@@ -333,6 +336,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.5.0)
+    uniform_notifier (1.16.0)
     useragent (0.16.10)
     validate_url (1.0.15)
       activemodel (>= 3.0.0)
@@ -370,6 +374,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   brakeman
+  bullet (~> 7.2)
   bundle_update_interactive (~> 0.7.0)
   capybara
   debug
