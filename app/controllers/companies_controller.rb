@@ -4,14 +4,20 @@ class CompaniesController < InertiaController
   include Pagy::Backend
 
   def index
-    pagy, companies = pagy(Company.includes(:technologies).all)
+    pagy, companies = pagy(company_scope.all)
     @companies = CompanySerializer.many(companies)
 
     paginate(pagy)
   end
 
   def show
-    company = Company.includes(:technologies).find(params[:id])
+    company = company_scope.find(params[:id])
     @company = CompanySerializer.one(company)
+  end
+
+  private
+
+  def company_scope
+    Company.includes(:technologies, :continent, :country, :region, :city)
   end
 end

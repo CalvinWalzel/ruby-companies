@@ -1,0 +1,11 @@
+# frozen_string_literal: true
+
+require "rails_helper"
+
+RSpec.describe(Region, type: :model) do
+  require_shoulda_matchers
+
+  describe "validations" do
+    it { is_expected.to(validate_presence_of(:name)) }
+  end
+end

@@ -26,6 +26,10 @@ function Index({ companies, pagination }: Props) {
         ),
       },
       {
+        accessorKey: "address.short",
+        header: "Location",
+      },
+      {
         accessorKey: "website",
         header: "Website",
         cell: ({ row }) => {
