@@ -24,6 +24,7 @@ require "rspec/rails"
 #
 # Rails.root.glob('spec/support/**/*.rb').sort.each { |f| require f }
 require Rails.root.join("spec/support/require_helpers.rb")
+require Rails.root.join("spec/support/bullet.rb")
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.
