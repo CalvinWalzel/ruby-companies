@@ -1159,12 +1159,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.15.0":
-  version: 20.15.0
-  resolution: "@types/node@npm:20.15.0"
+"@types/node@npm:20.16.5":
+  version: 20.16.5
+  resolution: "@types/node@npm:20.16.5"
   dependencies:
-    undici-types: "npm:~6.13.0"
-  checksum: 10c0/5d682b360e747c789a8b95fd680c102666610df5db69ac5da908c87d6571bafeeae444cad1700f56a147c5c1527a7c9c38ba234840d447ef9ed96cabfe5821cb
+    undici-types: "npm:~6.19.2"
+  checksum: 10c0/6af7994129815010bcbc4cf8221865559c8116ff43e74a6549525c2108267596fc2d18aff5d5ecfe089fb60a119f975631343e2c65c52bfa0955ed9dc56733d6
   languageName: node
   linkType: hard
 
@@ -5052,7 +5052,7 @@ __metadata:
     "@shopify/eslint-plugin": "npm:^46.0.0"
     "@tanstack/react-table": "npm:^8.19.3"
     "@trivago/prettier-plugin-sort-imports": "npm:^4.3.0"
-    "@types/node": "npm:20.15.0"
+    "@types/node": "npm:20.16.5"
     "@types/react": "npm:18.3.1"
     "@types/react-dom": "npm:18.3.0"
     "@vitejs/plugin-react": "npm:^4.3.1"
@@ -5735,10 +5735,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~6.13.0":
-  version: 6.13.0
-  resolution: "undici-types@npm:6.13.0"
-  checksum: 10c0/2de55181f569c77a4f08063f8bf2722fcbb6ea312a26a9e927bd1f5ea5cf3a281c5ddf23155061db083e0a25838f54813543ff13b0ac34d230d5c1205ead66c1
+"undici-types@npm:~6.19.2":
+  version: 6.19.8
+  resolution: "undici-types@npm:6.19.8"
+  checksum: 10c0/078afa5990fba110f6824823ace86073b4638f1d5112ee26e790155f481f2a868cc3e0615505b6f4282bdf74a3d8caad715fd809e870c2bb0704e3ea6082f344
   languageName: node
   linkType: hard
 
