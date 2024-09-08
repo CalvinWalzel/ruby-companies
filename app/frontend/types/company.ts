@@ -14,6 +14,7 @@ export interface Company {
     medium: string;
     full: string;
   };
+  logoUrl?: string;
   continent: GeoFragment;
   country: GeoFragment;
   region: GeoFragment;

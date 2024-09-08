@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CompanySerializer < ApplicationSerializer
+  include Rails.application.routes.url_helpers
+
   attributes(
     :id,
     :slug,
@@ -16,6 +18,12 @@ class CompanySerializer < ApplicationSerializer
       medium: medium_address,
       full: full_address,
     }
+  end
+
+  attribute :logo_url do
+    return unless company&.logo&.attached?
+
+    rails_representation_url(company.logo.variant(resize_to_fit: [100, 100]).processed, only_path: true)
   end
 
   has_many :technologies, serializer: TechnologySerializer

@@ -14,6 +14,8 @@ class Company < ApplicationRecord
   has_one :country, through: :region
   has_one :continent, through: :country
 
+  has_one_attached :logo
+
   validates :name, presence: true
   validates :website, url: { no_local: true, public_suffix: true }
   validates :careers_page, url: { no_local: true, public_suffix: true }, allow_blank: true
