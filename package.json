@@ -30,5 +30,5 @@
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
   },
-  "packageManager": "yarn@4.3.1"
+  "packageManager": "yarn@4.4.1"
 }
