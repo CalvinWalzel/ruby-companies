@@ -1,3 +1,5 @@
+import Footer from "@/layouts/application/footer";
+
 interface Props {
   children: React.ReactNode;
 }
@@ -13,6 +15,7 @@ function Layout({ children }: Props) {
       <main>
         <div className="container mx-auto pt-5 pb-10">{children}</div>
       </main>
+      <Footer />
     </div>
   );
 }
