@@ -91,8 +91,8 @@ class Seeder
         {
           name: "Company #{i}",
           slug: "company-#{i}",
-          website: "about:blank",
-          careers_page: "about:blank",
+          website: "https://ruby-companies.org",
+          careers_page: "https://ruby-companies.org",
           description: "Welcome to the page of Company #{i}. We are a company that does things.",
           city_id: @sample_cities.sample.id,
         }
