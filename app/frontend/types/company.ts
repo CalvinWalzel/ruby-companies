@@ -3,6 +3,7 @@ import { Technology } from "./technology";
 
 export interface Company {
   id: number;
+  slug: string;
   name: string;
   website?: string;
   careersPage?: string;

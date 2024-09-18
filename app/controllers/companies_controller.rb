@@ -11,7 +11,7 @@ class CompaniesController < InertiaController
   end
 
   def show
-    company = company_scope.find(params[:id])
+    company = company_scope.friendly.find(params[:id])
     @company = CompanySerializer.one(company)
   end
 

@@ -2,6 +2,10 @@
 # typed: strict
 
 class Company < ApplicationRecord
+  extend FriendlyId
+
+  friendly_id :slug_candidates, use: [:slugged, :history]
+
   has_many :company_technologies, dependent: :destroy
   has_many :technologies, through: :company_technologies
 
@@ -13,4 +17,18 @@ class Company < ApplicationRecord
   validates :name, presence: true
   validates :website, url: { no_local: true, public_suffix: true }
   validates :careers_page, url: { no_local: true, public_suffix: true }, allow_blank: true
+  validates :slug, presence: true
+
+  private
+
+  def slug_candidates
+    [
+      :name,
+      [:name, :city],
+    ]
+  end
+
+  def should_generate_new_friendly_id?
+    name_changed? || city_changed? || super
+  end
 end
