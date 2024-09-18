@@ -124,6 +124,8 @@ GEM
       railties (>= 5.0.0)
     faker (3.4.2)
       i18n (>= 1.8.11, < 2)
+    filterameter (1.0.0)
+      rails (>= 6.1)
     friendly_id (5.5.1)
       activerecord (>= 4.0.0)
     globalid (1.2.1)
@@ -379,6 +381,7 @@ DEPENDENCIES
   debug
   factory_bot_rails (~> 6.4)
   faker (~> 3.3)
+  filterameter (~> 1.0)
   friendly_id (~> 5.5)
   inertia_rails (~> 3.1)
   jbuilder

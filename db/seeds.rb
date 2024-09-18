@@ -17,6 +17,10 @@ class Seeder
       CompanyTechnology.destroy_all
       Technology.destroy_all
       Company.destroy_all
+      City.destroy_all
+      Country.destroy_all
+      Region.destroy_all
+      Continent.destroy_all
     end
 
     def seed_geo_data

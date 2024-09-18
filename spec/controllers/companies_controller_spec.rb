@@ -15,6 +15,10 @@ RSpec.describe(CompaniesController, type: :request) do
       expect_inertia.to(render_component("companies/index"))
       expect(inertia.props[:companies]).to(be_serialized_many(companies))
     end
+
+    it "has a valid filter declaration" do
+      expect(described_class.declarations_validator).to(be_valid)
+    end
   end
 
   describe "#show", inertia: true do
