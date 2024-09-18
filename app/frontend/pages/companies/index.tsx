@@ -20,7 +20,7 @@ function Index({ companies, pagination }: Props) {
         accessorKey: "name",
         header: "Name",
         cell: ({ row }) => (
-          <Link href={`/companies/${row.original.id}`}>
+          <Link href={`/companies/${row.original.slug}`}>
             {row.getValue("name")}
           </Link>
         ),

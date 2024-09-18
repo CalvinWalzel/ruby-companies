@@ -90,6 +90,7 @@ class Seeder
       create_records(Company, 48) do |i|
         {
           name: "Company #{i}",
+          slug: "company-#{i}",
           website: "about:blank",
           careers_page: "about:blank",
           description: "Welcome to the page of Company #{i}. We are a company that does things.",

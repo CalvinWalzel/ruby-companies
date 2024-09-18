@@ -21,7 +21,7 @@ RSpec.describe(CompaniesController, type: :request) do
     it "renders a company" do
       company = create(:company)
 
-      get "/companies/#{company.id}"
+      get "/companies/#{company.slug}"
 
       expect_inertia.to(render_component("companies/show"))
       expect(inertia.props[:company]).to(be_serialized_one(company))

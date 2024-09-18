@@ -3,6 +3,7 @@
 class CompanySerializer < ApplicationSerializer
   attributes(
     :id,
+    :slug,
     :name,
     :website,
     :careers_page,
