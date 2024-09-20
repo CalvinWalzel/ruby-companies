@@ -7,20 +7,9 @@ require "faker"
 class Seeder
   class << self
     def perform
-      destroy_data!
       seed_geo_data
       seed_technologies
       seed_companies
-    end
-
-    def destroy_data!
-      CompanyTechnology.destroy_all
-      Technology.destroy_all
-      Company.destroy_all
-      City.destroy_all
-      Country.destroy_all
-      Region.destroy_all
-      Continent.destroy_all
     end
 
     def seed_geo_data
@@ -66,12 +55,40 @@ class Seeder
       sao_paulo = Region.create!(name: "Sao Paulo", country: brazil)
       sao_paulo_city = City.create!(name: "Sao Paulo City", region: sao_paulo)
 
-      @sample_cities = [nairobi, tokyo, london, new_york_city, sydney, sao_paulo_city]
+      @sample_cities = [
+        nairobi,
+        tokyo,
+        london,
+        new_york_city,
+        sydney,
+        sao_paulo_city,
+      ]
     end
 
     def seed_technologies
       @ruby = Technology.create!(name: "Ruby", background_color: "#cc0000", text_color: "#ffffff")
       @rails = Technology.create!(name: "Ruby on Rails", background_color: "#cc0000", text_color: "#ffffff")
+
+      # create 8 more technologies related to Ruby and Ruby on Rails
+      rspec = Technology.create!(name: "RSpec", background_color: "#cc0000", text_color: "#ffffff")
+      sidekiq = Technology.create!(name: "Sidekiq", background_color: "#cc0000", text_color: "#ffffff")
+      postgres = Technology.create!(name: "PostgreSQL", background_color: "#336791", text_color: "#ffffff")
+      redis = Technology.create!(name: "Redis", background_color: "#dc382d", text_color: "#ffffff")
+      react = Technology.create!(name: "React", background_color: "#61dafb", text_color: "#000000")
+      vuejs = Technology.create!(name: "Vue.js", background_color: "#4fc08d", text_color: "#ffffff")
+      graphql = Technology.create!(name: "GraphQL", background_color: "#e535ab", text_color: "#ffffff")
+      elasticsearch = Technology.create!(name: "Elasticsearch", background_color: "#005571", text_color: "#ffffff")
+
+      @sample_technologies = [
+        rspec,
+        sidekiq,
+        postgres,
+        redis,
+        react,
+        vuejs,
+        graphql,
+        elasticsearch,
+      ]
     end
 
     def seed_companies
@@ -91,23 +108,17 @@ class Seeder
         technologies: [@ruby, @rails],
       )
 
-      create_records(Company, 48) do |i|
-        {
+      48.times do |i|
+        Company.create!(
           name: "Company #{i}",
           slug: "company-#{i}",
           website: "https://ruby-companies.org",
           careers_page: "https://ruby-companies.org",
           description: "Welcome to the page of Company #{i}. We are a company that does things.",
-          city_id: @sample_cities.sample.id,
-        }
+          city: @sample_cities.sample,
+          technologies: [@ruby, @rails] + @sample_technologies.sample(2),
+        )
       end
-    end
-
-    private
-
-    def create_records(model, count, &block)
-      record_data = Array.new(count, &block)
-      model.insert_all!(record_data)
     end
   end
 end
