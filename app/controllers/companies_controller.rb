@@ -30,6 +30,6 @@ class CompaniesController < InertiaController
   private
 
   def filter_params
-    params.fetch(:filter, {})
+    params.fetch(:filter, {}).permit(:name, :continent, :country, :region, :city)
   end
 end
