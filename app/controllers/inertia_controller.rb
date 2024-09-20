@@ -11,8 +11,8 @@ class InertiaController < ApplicationController
     inertia_render(inertia: true) unless performed?
   end
 
-  def paginate(pagy)
+  def inertia_pagination(pagy)
     pagination = pagy_metadata(pagy)
-    @pagination = PaginationSerializer.render(pagination)
+    PaginationSerializer.render(pagination)
   end
 end

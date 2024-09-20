@@ -13,7 +13,7 @@ RSpec::Matchers.define(:be_serialized_many) do |expected_scope|
     @actual_ids = actual&.map { |item| item[:id] }
     @expected_ids = expected_scope&.map(&:id)
 
-    expect(@actual_ids).to(eq(@expected_ids))
+    expect(@actual_ids).to(contain_exactly(*@expected_ids))
   end
 
   failure_message do

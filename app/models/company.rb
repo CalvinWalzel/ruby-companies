@@ -18,6 +18,10 @@ class Company < ApplicationRecord
   validates :website, url: { no_local: true, public_suffix: true }
   validates :careers_page, url: { no_local: true, public_suffix: true }, allow_blank: true
   validates :slug, presence: true
+  
+  scope :with_technologies, -> { includes(:technologies) }
+  scope :with_locations, -> { includes(:continent, country: :continent, region: :country, city: :region) }
+  scope :with_all_associations, -> { with_technologies.with_locations }
 
   private
 

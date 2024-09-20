@@ -17,6 +17,10 @@ class Seeder
       CompanyTechnology.destroy_all
       Technology.destroy_all
       Company.destroy_all
+      City.destroy_all
+      Country.destroy_all
+      Region.destroy_all
+      Continent.destroy_all
     end
 
     def seed_geo_data
@@ -91,8 +95,8 @@ class Seeder
         {
           name: "Company #{i}",
           slug: "company-#{i}",
-          website: "about:blank",
-          careers_page: "about:blank",
+          website: "https://ruby-companies.org",
+          careers_page: "https://ruby-companies.org",
           description: "Welcome to the page of Company #{i}. We are a company that does things.",
           city_id: @sample_cities.sample.id,
         }
