@@ -18,39 +18,8 @@ class CompaniesController < InertiaController
     @companies = CompanySerializer.many(companies)
     @pagination = inertia_pagination(pagy)
 
-    @filters = {
-      name: filter_params[:name],
-      continent: filter_params[:continent],
-      country: filter_params[:country],
-      region: filter_params[:region],
-      city: filter_params[:city],
-    }.compact_blank
-
-    # TODO: Refactor into serializer/service
-    countries = if filter_params[:continent]
-      Country.includes(:continent).where(continent: { slug: filter_params[:continent] })
-    else
-      []
-    end
-
-    regions = if filter_params[:continent] && filter_params[:country]
-      Region.includes(:country).where(country: { slug: filter_params[:country] })
-    else
-      []
-    end
-
-    cities = if filter_params[:continent] && filter_params[:country] && filter_params[:region]
-      City.includes(:region).where(region: { slug: filter_params[:region] })
-    else
-      []
-    end
-
-    @options = {
-      continents: Fragment::OptionSerializer.many(Continent.all),
-      countries: Fragment::OptionSerializer.many(countries),
-      regions: Fragment::OptionSerializer.many(regions),
-      cities: Fragment::OptionSerializer.many(cities),
-    }
+    @filters = filter_params.slice(:name, :continent, :country, :region, :city).compact_blank
+    @options = CompanyOptionsSerializer.render(filter_params)
   end
 
   def show
