@@ -1,4 +1,4 @@
-import { GeoFragment } from "./geo_fragment";
+import { GeoFragment } from "./fragments/geo";
 import { Technology } from "./technology";
 
 export interface Company {

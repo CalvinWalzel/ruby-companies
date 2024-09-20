@@ -7,14 +7,25 @@ import Link from "@/components/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import type { Company } from "@/types/company";
+import { CompanyFilter } from "@/types/company_filter";
+import type { Option } from "@/types/fragments/option";
 import type { PaginationData } from "@/types/pagination_data";
+
+import CompanyFilters from "./_filters";
 
 interface Props {
   companies: Company[];
   pagination: PaginationData;
+  filters: CompanyFilter;
+  options: {
+    continents: Option[];
+    countries: Option[];
+    regions: Option[];
+    cities: Option[];
+  };
 }
 
-function Index({ companies, pagination }: Props) {
+function Index({ companies, pagination, filters, options }: Props) {
   const columns: ColumnDef<Company>[] = useMemo(
     () => [
       {
@@ -51,6 +62,10 @@ function Index({ companies, pagination }: Props) {
         <CardTitle>Companies</CardTitle>
       </CardHeader>
       <CardContent>
+        <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6">
+          <CompanyFilters filters={filters} options={options} />
+        </div>
+
         <DataTable
           columns={columns}
           data={companies}

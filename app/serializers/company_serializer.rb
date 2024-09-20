@@ -19,10 +19,10 @@ class CompanySerializer < ApplicationSerializer
   end
 
   has_many :technologies, serializer: TechnologySerializer
-  has_one :continent, serializer: GeoFragmentSerializer
-  has_one :country, serializer: GeoFragmentSerializer
-  has_one :region, serializer: GeoFragmentSerializer
-  has_one :city, serializer: GeoFragmentSerializer
+  has_one :continent, serializer: Fragment::GeoSerializer
+  has_one :country, serializer: Fragment::GeoSerializer
+  has_one :region, serializer: Fragment::GeoSerializer
+  has_one :city, serializer: Fragment::GeoSerializer
 
   private
 
