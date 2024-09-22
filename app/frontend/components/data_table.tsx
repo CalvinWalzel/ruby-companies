@@ -18,16 +18,20 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
+import { cn } from "@/utils/ui";
+
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
   pagination: PaginatorProps;
+  className?: string;
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
   pagination,
+  className,
 }: DataTableProps<TData, TValue>) {
   const table = useReactTable({
     data,
@@ -38,7 +42,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <>
-      <div className="rounded-md border">
+      <div className={cn(className)}>
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
