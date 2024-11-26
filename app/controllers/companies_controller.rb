@@ -18,6 +18,6 @@ class CompaniesController < InertiaController
   private
 
   def company_scope
-    Company.includes(:technologies, :continent, :country, :region, :city)
+    Company.includes(:technologies, :continent, :country, :region, :city, :logo_attachment)
   end
 end

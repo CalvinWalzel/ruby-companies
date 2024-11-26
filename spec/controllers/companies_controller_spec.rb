@@ -6,6 +6,8 @@ RSpec.describe(CompaniesController, type: :request) do
   require_factories
   require_inertia
 
+  let(:company) { create(:company) }
+
   describe "#index", inertia: true do
     it "renders a list of companies" do
       companies = create_list(:company, 5)
@@ -19,8 +21,6 @@ RSpec.describe(CompaniesController, type: :request) do
 
   describe "#show", inertia: true do
     it "renders a company" do
-      company = create(:company)
-
       get "/companies/#{company.slug}"
 
       expect_inertia.to(render_component("companies/show"))

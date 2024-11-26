@@ -85,6 +85,11 @@ class Seeder
         and Internal Tool Builder for Ruby on Rails that saves engineers and teams months of development time.",
         city: @bucharest,
         technologies: [@ruby, @rails],
+        logo: {
+          io: File.open(Rails.root.join("db/seeds/avohq.png")),
+          filename: "avohq.png",
+          content_type: "image/png",
+        },
       )
 
       create_records(Company, 48) do |i|

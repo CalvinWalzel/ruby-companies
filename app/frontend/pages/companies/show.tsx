@@ -25,6 +25,7 @@ function Show({ company }: Props) {
 
   return (
     <div className="container mx-auto py-10">
+      <img src={company.logoUrl} />
       <h1 className="my-4 text-xl font-bold">{company.name}</h1>
       <div className="flex space-x-4 my-8">
         {company.website && (
